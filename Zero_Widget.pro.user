@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.13.2, 2021-05-16T14:27:09. -->
+<!-- Written by QtCreator 4.13.2, 2021-08-15T17:20:49. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -94,8 +94,8 @@
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
     <value type="bool">true</value>
     <value type="int" key="EnableQmlDebugging">0</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/stefan/build-Zero_Widget-Raspberry_Pi-Debug</value>
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/stefan/build-Zero_Widget-Raspberry_Pi-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/stefan/build-Zero_HomeTerminal_Pi-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory.shadowDir">/home/stefan/build-Zero_HomeTerminal_Pi-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -360,9 +360,9 @@
      <value type="QString">DISPLAY=:0</value>
      <value type="QString">XAUTHORITY=/home/pi/.Xauthority</value>
     </valuelist>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Zero_Widget (auf PiZero)</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">RemoteLinuxRunConfiguration:/home/stefan/Zero_Widget/Zero_Widget.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/stefan/Zero_Widget/Zero_Widget.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Zero_Widget (auf PiZero)2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">RemoteLinuxRunConfiguration:/home/stefan/HomeTerminal/Zero_Widget.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/stefan/HomeTerminal/Zero_Widget.pro</value>
     <value type="int" key="RemoteLinux.EnvironmentAspect.Version">1</value>
     <value type="QString" key="RemoteLinux.RunConfig.AlternateRemoteExecutable"></value>
     <value type="bool" key="RemoteLinux.RunConfig.UseAlternateRemoteExecutable">false</value>

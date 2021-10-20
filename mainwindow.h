@@ -87,6 +87,8 @@ public:
     QLabel* lbl_wf7_max;
     QSvgWidget *icn_wf7;
     QLabel* wc_icon;
+    QString minColor = "color:rgb(0,76,153);";
+    QString maxColor = "color:rgb(200,0,0);";
 
     QSvgWidget *BVG_logo;
     QLabel* BVG_Head;
@@ -113,8 +115,8 @@ public:
     QString accessId;
     QString id;
 
-    QLabel* lbl_Sys_CPU_1;
-    QLabel* lbl_Sys_CPU_5;
+    //QLabel* lbl_Sys_CPU_1;
+    //QLabel* lbl_Sys_CPU_5;
     QLabel* lbl_Sys_CPU_15;
     QLabel* lbl_Sys_CPU_temp;
     QLabel* lbl_Sys_Mem;

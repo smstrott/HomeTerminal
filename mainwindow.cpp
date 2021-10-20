@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
     //MainWindow::setStyleSheet("background-color:darkblue;");
-    MainWindow::setStyleSheet("color: white; background-color: grey");
+    MainWindow::setStyleSheet("color: black; background-color: silver");
     QTimer *timer = new QTimer(this);
     timer->start(1000);
     QTimer *systimer = new QTimer(this);
@@ -135,13 +135,13 @@ void MainWindow::getCPULoad()
 
 void MainWindow::SetshowSysInfo()
 {
-    lbl_Sys_CPU_1 = new QLabel("BVG 1", this);
-    lbl_Sys_CPU_1->setGeometry(0, 268, 150, 16);
-    lbl_Sys_CPU_1->setStyleSheet("QLabel { background-color : yellow; color : black; }");
+    //lbl_Sys_CPU_1 = new QLabel("BVG 1", this);
+    //lbl_Sys_CPU_1->setGeometry(0, 268, 150, 16);
+    //lbl_Sys_CPU_1->setStyleSheet("QLabel { background-color : yellow; color : black; }");
 
-    lbl_Sys_CPU_5 = new QLabel("BVG 1", this);
-    lbl_Sys_CPU_5->setGeometry(0, 284, 150, 16);
-    lbl_Sys_CPU_5->setStyleSheet("QLabel { background-color : yellow; color : black; }");
+    //lbl_Sys_CPU_5 = new QLabel("BVG 1", this);
+    //lbl_Sys_CPU_5->setGeometry(0, 284, 150, 16);
+    //lbl_Sys_CPU_5->setStyleSheet("QLabel { background-color : yellow; color : black; }");
 
     lbl_Sys_CPU_15 = new QLabel("BVG 1", this);
     lbl_Sys_CPU_15->setGeometry(0, 300, 150, 16);
@@ -159,14 +159,14 @@ void MainWindow::SetshowTraffic()
 {
 
     BVG_Head = new QLabel("Weil wir dich Lieben", this);
-    BVG_Head->setGeometry(220, 10, 150, 40);
+    BVG_Head->setGeometry(220, 5, 150, 40);
     BVG_Head->setStyleSheet("QLabel {color : black; }");
     QFont fnt_traffic( "Verdana", 11);
     BVG_Head->setFont(fnt_traffic);
     //QString logopath = ":/bvg_small.svg";
     //BVG_logo->load(logopath);
     BVG_logo = new QSvgWidget(":/bvg_small.svg", this);
-    BVG_logo->setGeometry(180, 10, 40, 40);
+    BVG_logo->setGeometry(180, 5, 40, 40);
 
 
     BVG_1 = new QLabel("BVG 1", this);
@@ -257,17 +257,17 @@ void MainWindow::showSysInfo()
     MainWindow::getFreeRAM();
     MainWindow::getCPULoad();
 
-    lbl_Sys_CPU_1->setStyleSheet("QLabel { background-color : grey ; color : black; }");
-    lbl_Sys_CPU_1->setText("1 min CPU Load avg: " + QString::number(Sys_CPU_1));
-    lbl_Sys_CPU_5->setStyleSheet("QLabel { background-color : grey ; color : black; }");
-    lbl_Sys_CPU_5->setText("5 min CPU Load avg: " + QString::number(Sys_CPU_5));
-    lbl_Sys_CPU_15->setStyleSheet("QLabel { background-color : grey ; color : black; }");
+    //lbl_Sys_CPU_1->setStyleSheet("QLabel { background-color : silver ; color : black; }");
+    //lbl_Sys_CPU_1->setText("1 min CPU Load avg: " + QString::number(Sys_CPU_1));
+    //lbl_Sys_CPU_5->setStyleSheet("QLabel { background-color : silver ; color : black; }");
+    //lbl_Sys_CPU_5->setText("5 min CPU Load avg: " + QString::number(Sys_CPU_5));
+    lbl_Sys_CPU_15->setStyleSheet("QLabel { background-color : silver ; color : black; }");
     lbl_Sys_CPU_15->setText("15 min CPU Load avg: " + QString::number(Sys_CPU_15));
 
-    lbl_Sys_CPU_temp->setStyleSheet("QLabel { background-color : grey ; color : black; }");
+    lbl_Sys_CPU_temp->setStyleSheet("QLabel { background-color : silver ; color : black; }");
     lbl_Sys_CPU_temp->setText("CPU Temp.: " + Sys_CPU_temp + "C");
 
-    lbl_Sys_Mem->setStyleSheet("QLabel { background-color : grey ; color : black; }");
+    lbl_Sys_Mem->setStyleSheet("QLabel { background-color : silver ; color : black; }");
     lbl_Sys_Mem->setText("Mem usg.: " + QString::number(Sys_Mem) + "%");
     qInfo() << "showSysInfo done";
 }
@@ -327,59 +327,60 @@ void MainWindow::setForecastWatherShow()
     int x_pos_day = 2;
     int x_pos_L = 70;
     int x_pos = 5;
+
     // Day Plus 1
     lbl_wf1_day = new QLabel("wf_day", this);
     lbl_wf1_day->setGeometry(x_pos_day, 85, temp_width, temp_height);
     lbl_wf1_min = new QLabel("wf_min", this);
-    lbl_wf1_min->setGeometry(x_pos_L, 97, min_width, min_height);
-    lbl_wf1_min->setStyleSheet("color:rgb(51,187,255);");
+    lbl_wf1_min->setGeometry(x_pos_L, 98, min_width, min_height);
+    lbl_wf1_min->setStyleSheet(minColor);
     lbl_wf1_max = new QLabel("wf_max", this);
-    lbl_wf1_max->setGeometry(x_pos_L, 85, max_width, max_height);
-    lbl_wf1_max->setStyleSheet("color:rgb(255,102,153);");
+    lbl_wf1_max->setGeometry(x_pos_L, 84, max_width, max_height);
+    lbl_wf1_max->setStyleSheet(maxColor);
     icn_wf1 = new QSvgWidget(":/weather_icons/wi-alien.svg", this);
     icn_wf1->setGeometry(130, 75, 40, 40);
     // Day Plus 2
     lbl_wf2_day = new QLabel("wf_day", this);
     lbl_wf2_day->setGeometry(x_pos_day, 125, temp_width, temp_height);
     lbl_wf2_min = new QLabel("wf_min", this);
-    lbl_wf2_min->setGeometry(x_pos_L, 137, min_width, min_height);
-    lbl_wf2_min->setStyleSheet("color:rgb(51,187,255);");
+    lbl_wf2_min->setGeometry(x_pos_L, 138, min_width, min_height);
+    lbl_wf2_min->setStyleSheet(minColor);
     lbl_wf2_max = new QLabel("wf_max", this);
-    lbl_wf2_max->setGeometry(x_pos_L, 125, max_width, max_height);
-    lbl_wf2_max->setStyleSheet("color:rgb(255,102,153);");
+    lbl_wf2_max->setGeometry(x_pos_L, 124, max_width, max_height);
+    lbl_wf2_max->setStyleSheet(maxColor);
     icn_wf2 = new QSvgWidget(":/weather_icons/wi-alien.svg", this);
     icn_wf2->setGeometry(130, 115, 40, 40);
     // Day Plus 3
     lbl_wf3_day = new QLabel("wf_temp", this);
     lbl_wf3_day->setGeometry(x_pos_day, 165, temp_width, temp_height);
     lbl_wf3_min = new QLabel("wf_min", this);
-    lbl_wf3_min->setGeometry(x_pos_L, 177, min_width, min_height);
-    lbl_wf3_min->setStyleSheet("color:rgb(51,187,255);");
+    lbl_wf3_min->setGeometry(x_pos_L, 178, min_width, min_height);
+    lbl_wf3_min->setStyleSheet(minColor);
     lbl_wf3_max = new QLabel("wf_max", this);
-    lbl_wf3_max->setGeometry(x_pos_L, 165, max_width, max_height);
-    lbl_wf3_max->setStyleSheet("color:rgb(255,102,153);");
+    lbl_wf3_max->setGeometry(x_pos_L, 164, max_width, max_height);
+    lbl_wf3_max->setStyleSheet(maxColor);
     icn_wf3 = new QSvgWidget(":/weather_icons/wi-alien.svg", this);
     icn_wf3->setGeometry(130, 155, 40, 40);
     // Day Plus 4
     lbl_wf4_day = new QLabel("wf_temp", this);
     lbl_wf4_day->setGeometry(x_pos_day, 205, temp_width, temp_height);
     lbl_wf4_min = new QLabel("wf_min", this);
-    lbl_wf4_min->setGeometry(x_pos_L, 217, min_width, min_height);
-    lbl_wf4_min->setStyleSheet("color:rgb(51,187,255);");
+    lbl_wf4_min->setGeometry(x_pos_L, 218, min_width, min_height);
+    lbl_wf4_min->setStyleSheet(minColor);
     lbl_wf4_max = new QLabel("wf_max", this);
-    lbl_wf4_max->setGeometry(x_pos_L, 205, max_width, max_height);
-    lbl_wf4_max->setStyleSheet("color:rgb(255,102,153);");
+    lbl_wf4_max->setGeometry(x_pos_L, 204, max_width, max_height);
+    lbl_wf4_max->setStyleSheet(maxColor);
     icn_wf4 = new QSvgWidget(":/weather_icons/wi-alien.svg", this);
     icn_wf4->setGeometry(130, 195, 40, 40);
     // Day Plus 4
     lbl_wf5_day = new QLabel("wf_temp", this);
     lbl_wf5_day->setGeometry(x_pos_day, 245, temp_width, temp_height);
     lbl_wf5_min = new QLabel("wf_min", this);
-    lbl_wf5_min->setGeometry(x_pos_L, 257, min_width, min_height);
-    lbl_wf5_min->setStyleSheet("color:rgb(51,187,255);");
+    lbl_wf5_min->setGeometry(x_pos_L, 258, min_width, min_height);
+    lbl_wf5_min->setStyleSheet(minColor);
     lbl_wf5_max = new QLabel("wf_max", this);
-    lbl_wf5_max->setGeometry(x_pos_L, 245, max_width, max_height);
-    lbl_wf5_max->setStyleSheet("color:rgb(255,102,153);");
+    lbl_wf5_max->setGeometry(x_pos_L, 244, max_width, max_height);
+    lbl_wf5_max->setStyleSheet(maxColor);
     icn_wf5 = new QSvgWidget(":/weather_icons/wi-alien.svg", this);
     icn_wf5->setGeometry(130, 235, 40, 40);
 
@@ -419,10 +420,10 @@ void MainWindow::setWeatherShow(){
 
     lbl_wc_min = new QLabel("wc_min", this);
     lbl_wc_min->setGeometry(2, 50, 150, min_height);
-    lbl_wc_min->setStyleSheet("color:rgb(51,187,255);");
+    lbl_wc_min->setStyleSheet(minColor);
     lbl_wc_max = new QLabel("wc_max", this);
     lbl_wc_max->setGeometry(70, 50, 150, max_height);
-    lbl_wc_max->setStyleSheet("color:rgb(255,102,153);");
+    lbl_wc_max->setStyleSheet(maxColor);
 
     QFont fnt_wc_temp_main( "Verdana", 32, QFont::Bold);
 
